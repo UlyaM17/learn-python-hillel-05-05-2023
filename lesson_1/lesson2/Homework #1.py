@@ -1,17 +1,37 @@
-import decimal
+# i. 9603.75 is the starting value
+# ii. 9705.23 is the final value
+# iii.1.44 uah is the cost per cubic m
 
-# gas used by average car for 100 km = 7l
-# price per l of gas = 46.50 UAH
-# distance = 100 km
 
-a = 7.000
-b = 46.500
-c = 100
+y = 9603.75
+z = 9705.23
 
-x = a * b
+x = (z - y) * 1.44
+x = round(x, 2)
 print(x)
 
-round(x, 2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
