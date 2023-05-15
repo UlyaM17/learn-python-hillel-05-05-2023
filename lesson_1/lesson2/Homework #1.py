@@ -10,6 +10,12 @@ x = (z - y) * 1.44
 x = round(x, 2)
 print(x)
 
+s = float(input(round(((z - y) * 1.44), 2)))
+
+
+
+
+
 
 
 
