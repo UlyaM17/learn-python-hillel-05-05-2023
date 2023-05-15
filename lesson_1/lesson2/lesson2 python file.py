@@ -16,6 +16,23 @@ print(first == second)
 
 import this
 
+is_digit = '2' == 2
+print(is_digit)
+
+import math
+
+
+my_float = 3.9
+my_integer = int(my_float)
+print(my_integer)
+
+# does not round mathematically correct
+
+
+
+
+
+
 
 
 
