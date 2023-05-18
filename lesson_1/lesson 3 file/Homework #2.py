@@ -28,7 +28,7 @@ index = text.find("favorite")
 if text.find("favorite"):
     print("success")
 
-# specific string
+# indicate the specific string
 word = 'favorite'
 result = word.find('favorite')
 print("Word 'favorite ' found at index:", result)
