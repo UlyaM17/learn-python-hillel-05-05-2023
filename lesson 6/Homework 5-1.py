@@ -6,7 +6,7 @@ w = ''
 punctuation = ',./<>()-+=:;" '
 # reverse x:
 # x = x[::-1]
-# x = x.strip(punctuation)
+
 for i in x:
     # lower case
     x = x.lower()
