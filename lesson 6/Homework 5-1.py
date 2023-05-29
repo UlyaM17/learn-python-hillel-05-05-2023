@@ -2,7 +2,7 @@
 print('Please input your word')
 # user answers
 x = input()
-w = ''
+
 punctuation = ',./<>()-+=:;" '
 # reverse x:
 # x = x[::-1]
