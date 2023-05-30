@@ -3,7 +3,7 @@ x = 'Today it was a (very) beautiful day))'
 punctuation = '()'
 # to remove text inside parenthesis
 for punctuation_symbol in punctuation:
-    x = x.strip('()')
+    # removing each character and the word
     x = x.replace('(', '').replace(')', '').replace('very', '')
     print(x)
 
