@@ -4,8 +4,7 @@ print('Please input your word')
 x = input()
 
 punctuation = ',./<>()-+=:;" '
-# reverse x:
-# x = x[::-1]
+# reverse x: x = x[::-1]
 
 for i in x:
     # lower case
