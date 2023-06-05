@@ -5,7 +5,7 @@ from cmath import sqrt
 # using cmath, to prevent error if square root of negative number
 
 
-def read_user_number(user_prompt, lower_bound=0, upper_bound=9999999):
+def read_user_number(user_prompt):
     # first function reads the values entered
     # determines if the values are numeric
     while True:
