@@ -1,12 +1,7 @@
-# if the triangle exists by input sides
-# perimeter and area
-# 4 functions: read sides (numeric); true or false- existence;
-# perimeter; area
-#                 if a + b > c or a + c > b or b + c > a:
-#                     return number
-
 
 from cmath import sqrt
+
+
 # adding square root import for the area function
 # using cmath, to prevent error if square root of negative number
 
@@ -36,7 +31,6 @@ p = (a + b + c)  # perimeter
 half_p = (p / 2)  # half of perimeter for area function
 area = sqrt(half_p * (half_p - a) * (half_p - b) * (half_p - c))  # area function
 
-
 if (a + b) > c and (b + c) > a and (c + a) > b:
     # if conditions are met, triangle exists
     print('Triangle is valid')
@@ -48,5 +42,3 @@ else:
     # are and perimeter are not found
     # because triangle is not valid
     print('Triangle is not valid')
-
-
