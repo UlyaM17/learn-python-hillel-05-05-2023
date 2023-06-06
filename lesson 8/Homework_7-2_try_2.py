@@ -13,11 +13,11 @@ def is_prime(user_prompt):
     :return: yes, no
     """
     while True:
-        # if entry is numeric
         user_input = input(f'{user_prompt}\n>> ')
         try:
-            # checking if entered number is in given set
+            # checking if entry is numeric
             user_input = int(user_input)
+            # checking if entered number is in given set
             if user_input in PRIME_SET:
                 return True
             else:
