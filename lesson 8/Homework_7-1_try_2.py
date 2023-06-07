@@ -17,7 +17,7 @@ def read_user_number(user_prompt):
 
 def convert_user_number(user_input) -> dict:
     """
-            :param: number
+            :param: user_input
             :return: dictionary
             """
     while user_input is True:
@@ -36,7 +36,7 @@ def convert_user_number(user_input) -> dict:
 if __name__ == '__main__':
     while True:
         seconds_entry = read_user_number(user_prompt='Enter number of seconds\n>> ')
-        seconds_converted = convert_user_number(user_input='Your results:\n>>')
+        seconds_converted = convert_user_number(seconds_entry)
         print(seconds_converted)
 
 
