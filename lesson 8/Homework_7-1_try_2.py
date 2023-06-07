@@ -15,19 +15,20 @@ def read_user_number(user_prompt):
             print(f'\nPlease enter a whole numeric value')
 
 
-def convert_user_number(user_prompt) -> dict:
+def convert_user_number(user_input) -> dict:
     """
             :param: number
             :return: dictionary
             """
-    d = dict()
-    if d:
-        d = {'seconds': {user_prompt},
-             'minutes': divmod(user_prompt, 60),
-             'hours': divmod(user_prompt, (60 * 60)),
-             'days': divmod(user_prompt, (24 * 60 * 60))
-             }
-        return d
+    while user_input is True:
+        d = dict()
+        if d:
+            d = {'seconds': {user_input},
+                 'minutes': divmod(user_input, 60),
+                 'hours': divmod(user_input, (60 * 60)),
+                 'days': divmod(user_input, (24 * 60 * 60))
+                 }
+            return d
     else:
         print(f'\nCould not calculate')
 
@@ -35,6 +36,7 @@ def convert_user_number(user_prompt) -> dict:
 if __name__ == '__main__':
     while True:
         seconds_entry = read_user_number(user_prompt='Enter number of seconds\n>> ')
-        seconds_converted = convert_user_number(seconds_entry)
+        seconds_converted = convert_user_number(user_input='Your results:\n>>')
         print(seconds_converted)
+
 
