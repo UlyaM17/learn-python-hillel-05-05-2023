@@ -30,7 +30,7 @@ def convert_user_number(user_input) -> dict:
              }
         return d
     else:
-        # error is user entry
+        # error in user entry
         print(f'\nCould not calculate')
 
 
