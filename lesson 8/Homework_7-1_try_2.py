@@ -21,10 +21,10 @@ def convert_user_number(user_input) -> dict:
             :return: dictionary
             """
     if type(user_input) == int:
-        d = {'seconds': {user_input},
-             'minutes': divmod(user_input, 60),
-             'hours': divmod(user_input, (60 * 60)),
-             'days': divmod(user_input, (24 * 60 * 60))
+        d = {'seconds': user_input,
+             'minutes': user_input // 60,
+             'hours': user_input // 3600,
+             'days': user_input // 86400
              }
         return d
     else:
