@@ -24,11 +24,11 @@ def get_input():
         return None
 
 
-def print_array(array):
+def print_list(list):
     # to print each entry in new line
     # for better look
-    for i in range(len(array)):
-        print(array[i])
+    for i in range(len(list)):
+        print(list[i])
 
 
 def add_note(existing_notes, new_note):
@@ -88,4 +88,4 @@ if __name__ == '__main__':
                     sorted_notes = sorted(notes, key=len, reverse=True)
                 elif command == "shortest":
                     sorted_notes = sorted(notes, key=len)
-                print_array(sorted_notes)
+                print_list(sorted_notes)
