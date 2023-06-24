@@ -13,6 +13,7 @@ def open_csv_file_dict(tech_inventory, to_print=True) -> list:
         reader = csv.DictReader(csv_file)
         rows = list(reader)
         for row in rows:
+            uid = reader.line_num - 1
             print(type(row), row)
     return rows
 
@@ -43,26 +44,26 @@ def create_position_id_index(all_data: list, column_name: str) -> dict:
 def create_subindex_brand(all_data):
     # list of all brands
     brand_list = set((x['brand'] for x in all_data))
-    index = dict()
+    index_1 = dict()
     # for each brand:
     # get the list of all ids of products with that brand
     # and return them in a dictionary
-    for prop in brand_list:
-        index[prop] = tuple(x["brand"] for x in tech_data if x['brand'])
-    return index
+    for brand in brand_list:
+        index_1[brand] = tuple(x["brand"] for x in tech_data if x['brand'] == brand)
+    return index_1
 
 
 def create_subindex_category(all_data):
     # list of all categories
     category_list = set((x['category'] for x in all_data))
-    index = dict()
+    index_2 = dict()
 
     # for each (category):
     # get the list of all ids of products with that (category)
     # and return them in a dictionary
-    for prop in category_list:
-        index[prop] = tuple(x["category"] for x in tech_data if x['category'])
-    return index
+    for category in category_list:
+        index_2[category] = tuple(x["category"] for x in tech_data if x['category'] == category)
+    return index_2
 
 
 if __name__ == '__main__':
@@ -91,5 +92,3 @@ if __name__ == '__main__':
     brands = ((b, len(brand_subindex[b])) for b in brand_subindex.keys())
     for b in brands:
         print(f'{b[0]}: {b[1]}')
-
-
