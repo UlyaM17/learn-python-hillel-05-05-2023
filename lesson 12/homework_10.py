@@ -14,7 +14,7 @@ def open_csv_file_dict(tech_inventory, to_print=True) -> list:
         rows = list(reader)
         for row in rows:
             uid = reader.line_num - 1
-            print(type(row), row)
+            print(row)
     return rows
 
 
@@ -23,7 +23,7 @@ def generate_csv_rows(all_data) -> tuple:
     rows = list()
     header = ["model", "category", "brand", "price"]
     for header in all_data:
-        print(type(header), header)
+        print(header)
     return rows, header
 
 
@@ -73,25 +73,25 @@ if __name__ == '__main__':
     open_csv_file_dict('tech_inventory.csv', generated_header)
 
     model_index = create_position_id_index(tech_data, "model")
-    print(type(model_index), model_index)
+    print(model_index)
 
     category_index = create_position_id_index(tech_data, "category")
-    print(type(category_index), category_index)
+    print(category_index)
 
     brand_index = create_position_id_index(tech_data, "brand")
-    print(type(brand_index), brand_index)
+    print(brand_index)
 
     price_index = create_position_id_index(tech_data, "price")
-    print(type(price_index), price_index)
+    print(price_index)
 
     category_subindex = create_subindex_category(tech_data)
-    print(type(category_subindex), category_subindex)
+    print(category_subindex)
     categories = ((c, len(category_subindex[c])) for c in category_subindex.keys())
     for c in categories:
         print(f'{c[0]}: {c[1]}')
 
     brand_subindex = create_subindex_brand(tech_data)
-    print(type(brand_subindex), brand_subindex)
+    print(brand_subindex)
     brands = ((b, len(brand_subindex[b])) for b in brand_subindex.keys())
     for b in brands:
         print(f'{b[0]}: {b[1]}')
