@@ -86,6 +86,9 @@ if __name__ == '__main__':
 
     category_subindex = create_subindex_category(tech_data)
     print(type(category_subindex), category_subindex)
+    categories = ((c, len(category_subindex[c])) for c in category_subindex.keys())
+    for c in categories:
+        print(f'{c[0]}: {c[1]}')
 
     brand_subindex = create_subindex_brand(tech_data)
     print(type(brand_subindex), brand_subindex)
