@@ -49,7 +49,7 @@ def create_subindex_brand(all_data):
     # get the list of all ids of products with that brand
     # and return them in a dictionary
     for brand in brand_list:
-        index_1[brand] = tuple(x["brand"] for x in tech_data if x['brand'] == brand)
+        index_1[brand] = tuple(x["brand"] for x in all_data if x['brand'] == brand)
     return index_1
 
 
@@ -62,7 +62,7 @@ def create_subindex_category(all_data):
     # get the list of all ids of products with that (category)
     # and return them in a dictionary
     for category in category_list:
-        index_2[category] = tuple(x["category"] for x in tech_data if x['category'] == category)
+        index_2[category] = tuple(x["category"] for x in all_data if x['category'] == category)
     return index_2
 
 
