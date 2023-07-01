@@ -73,10 +73,14 @@ if __name__ == '__main__':
 
     model_index = create_id_index(tech_data, "model")
     print(model_index)
+    for i in model_index:
+        print(i, model_index[i])
     print('---')
 
     category_index = create_id_index(tech_data, "category")
     print(category_index)
+    for i in brand_index:
+        print(i, brand_index[i])
     print('---')
 
     brand_index = create_id_index(tech_data, "brand")
