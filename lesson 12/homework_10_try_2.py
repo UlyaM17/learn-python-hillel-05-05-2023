@@ -60,6 +60,7 @@ def create_subindex_category(all_data):
 
 if __name__ == '__main__':
     tech_data = open_csv_file_dict('tech_inventory.csv', to_print=False)
+    print('---')
 
     unique_position_id_index = dict()
     unique_uuid_index = dict()
@@ -73,14 +74,22 @@ if __name__ == '__main__':
 
     model_index = create_id_index(tech_data, "model")
     print(model_index)
+    for i in model_index:
+        print(i, model_index[i])
     print('---')
 
     category_index = create_id_index(tech_data, "category")
     print(category_index)
+    for i in category_index:
+        # by category - all info
+        print(i, category_index[i])
     print('---')
 
     brand_index = create_id_index(tech_data, "brand")
     print(brand_index)
+    for i in brand_index:
+        # by brand - all info
+        print(i, brand_index[i])
     print('---')
 
     price_index = create_id_index(tech_data, "price")
@@ -88,13 +97,13 @@ if __name__ == '__main__':
     print('---')
 
     category_subindex = create_subindex_category(tech_data)
-    print(category_subindex)
     categories = ((c, len(category_subindex[c])) for c in category_subindex.keys())
     for c in categories:
         print(f'{c[0]}: {c[1]}')
 
+    print('---')
+
     brand_subindex = create_subindex_brand(tech_data)
-    print(brand_subindex)
     brands = ((b, len(brand_subindex[b])) for b in brand_subindex.keys())
     for b in brands:
         print(f'{b[0]}: {b[1]}')
