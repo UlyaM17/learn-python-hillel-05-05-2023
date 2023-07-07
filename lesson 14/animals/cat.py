@@ -25,6 +25,7 @@ class Cat(Animal):
         :return: none, or happiness
         """
         if hours > 2:
+            # if outside for over 2 hours: happy animal and owner
             print(f'You are walking {self} for {hours} hours and you are feeling happy.')
             return 'happiness!'
         print(f'You are walking {self} for {hours} hours.')
@@ -36,9 +37,13 @@ class Cat(Animal):
         :return:
         """
         if not self.sick:
+            # animal feels good and does not need a vet
             return
         if self.sick:
+            # animal is sick, so is at the vet
             print(f'{self} is being treated by a vet!!!')
             if minutes > 30:
+                # the vet treats the animal for over half hour
+                # so the animal is now healthy
                 self.sick = False
                 print(f'{self} is now feeling good!')

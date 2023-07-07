@@ -30,7 +30,7 @@ class Hen(Animal):
         """
         if hours > 2:
             print(f'You are treating {self} for {hours} hours and are getting 10 eggs.')
-            return 'Eggs received: 10.'
+            return 'Eggs received: 10'
         print(f'You are treating {self} for {hours} hours and are getting a few eggs.')
         return f'Eggs received: {randint(1, 5)}'
 
@@ -40,10 +40,14 @@ class Hen(Animal):
         :return:
         """
         if not self.sick:
+            # animal feels good and does not need a vet
             return
         if self.sick:
+            # animal is sick, so is at the vet
             print(f'{self} is being treated by a vet!!!')
             if minutes > 30:
+                # the vet treats the animal for over half hour
+                # so the animal is now healthy
                 self.sick = False
                 print(f'{self} is now feeling good!')
 

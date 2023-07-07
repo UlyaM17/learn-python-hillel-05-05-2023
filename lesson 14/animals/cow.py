@@ -28,10 +28,14 @@ class Cow(Animal):
         :return:
         """
         if not self.sick:
+            # animal feels good and does not need a vet
             return
         if self.sick:
+            # animal is sick, so is at the vet
             print(f'{self} is being treated by a vet!!!')
             if minutes > 30:
+                # the vet treats the animal for over half hour
+                # so the animal is now healthy
                 self.sick = False
                 print(f'{self} is now feeling good!')
 
