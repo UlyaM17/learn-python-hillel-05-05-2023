@@ -11,8 +11,8 @@ def fibonacci_generator_function(n: int):
 
 
 if __name__ == '__main__':
-    generator = fibonacci_generator_function(n=101)
-    for number in range(101):
+    generator = fibonacci_generator_function(n=100)
+    for number in range(100):
         # get 100 first numbers in Fibonacci sequence
         # printing sequence in given range
         print(generator.__next__())
